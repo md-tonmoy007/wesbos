@@ -430,7 +430,7 @@ That gives us a nice boolean we can use like so, 👇
 
 ```js
 modalOuter.addEventListener('click', function(event) {
-  const isOutside = event.target.closest('.modal-inner');
+  const isOutside = !event.target.closest('.modal-inner');
   if (isOutside) {
     closeModal();
   }
